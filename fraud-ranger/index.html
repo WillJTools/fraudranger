@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fraud Ranger – Identify & Report Fraud</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/decision-tree.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Fraud&nbsp;Ranger</a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="what-to-do.html">What&nbsp;To&nbsp;Do&nbsp;First</a></li>
+          <li><a href="report.html">Report&nbsp;Fraud</a></li>
+          <li><a href="spot-fraud.html">Spot&nbsp;Fraud</a></li>
+          <li><a href="recovery.html">Recovery</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Fraud happens fast. Recovery shouldn’t be confusing.</h1>
+        <p class="subheading">Fraud Ranger helps Americans identify fraud, take immediate action, and report to the correct federal agencies.</p>
+        <div class="button-group">
+          <a href="what-to-do.html" class="btn btn-primary">Start Here</a>
+          <a href="report.html" class="btn btn-secondary">Report Fraud Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Immediate Emergency Warning -->
+    <section class="warning">
+      <div class="container">
+        <div class="warning-box" role="alert">
+          <p><strong>If money was taken from your bank account or card, contact your bank immediately</strong> before filing any reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Happened Section -->
+    <section class="what-happened">
+      <div class="container">
+        <h2 id="what-happened-heading">What Happened?</h2>
+        <p>Select the type of fraud you experienced to find specific guidance.</p>
+        <div class="cards-grid" aria-labelledby="what-happened-heading">
+          <a class="card" href="what-to-do.html#money-taken">
+            <h3>Bank / Credit Card Fraud</h3>
+          </a>
+          <a class="card" href="what-to-do.html#identity-stolen">
+            <h3>Identity Theft</h3>
+          </a>
+          <a class="card" href="what-to-do.html#online-fraud">
+            <h3>Online Scam</h3>
+          </a>
+          <a class="card" href="what-to-do.html#investment-fraud">
+            <h3>Investment Fraud</h3>
+          </a>
+          <a class="card" href="what-to-do.html#tax-fraud">
+            <h3>Tax Fraud</h3>
+          </a>
+          <a class="card" href="what-to-do.html#social-security-fraud">
+            <h3>Social Security Fraud</h3>
+          </a>
+          <a class="card" href="what-to-do.html#romance-scam">
+            <h3>Romance Scam</h3>
+          </a>
+          <a class="card" href="what-to-do.html#tech-support-scam">
+            <h3>Tech Support Scam</h3>
+          </a>
+        </div>
+
+        <!-- Decision Tree interactive quick tips -->
+        <div class="decision-tree" id="decision-tree-section">
+          <label for="fraudType">Or choose a fraud type to see the first three steps:</label>
+          <select id="fraudType">
+            <option value="" selected disabled>Select…</option>
+            <option value="money">Bank / Credit Card Fraud</option>
+            <option value="identity">Identity Theft</option>
+            <option value="online">Online Fraud</option>
+            <option value="investment">Investment Fraud</option>
+            <option value="tax">Tax Fraud</option>
+            <option value="social">Social Security Fraud</option>
+            <option value="romance">Romance Scam</option>
+            <option value="tech">Tech Support Scam</option>
+          </select>
+          <div id="decisionResult" class="decision-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="about.html#disclaimer">Disclaimer</a></li>
+        <li><a href="#" aria-label="GitHub repository (coming soon)">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
