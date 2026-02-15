@@ -193,11 +193,22 @@ body {
 }
 
 .decision-result {
-  padding: 0.5rem;
+  padding: 0.75rem;
   background-color: #f9f9f9;
   border-radius: 0.25rem;
   border: 1px solid #e5e7eb;
   min-height: 2rem;
+}
+
+/* ✅ Fix: keep ordered list numbers inside the decision-result box */
+.decision-result ol {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.decision-result li {
+  margin: 0.35rem 0;
 }
 
 /* Lists */
