@@ -1,6 +1,6 @@
 /*
  * Fraud Ranger Styles
- * A simple, calm and authoritative design for a static information website.
+ * Clean, calm, government-adjacent design
  */
 
 :root {
@@ -13,7 +13,7 @@
   --heading: #111;
 }
 
-/* Basic Reset */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,7 +39,8 @@ body {
   padding: 1rem 0;
 }
 
-/* Header */
+/* ================= HEADER ================= */
+
 .site-header {
   background-color: var(--primary);
   color: var(--accent);
@@ -55,14 +56,14 @@ body {
 .logo {
   color: var(--accent);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.25rem;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .nav-list a {
@@ -71,33 +72,36 @@ body {
   font-size: 0.9rem;
 }
 
-.nav-list a.active,
 .nav-list a:hover,
+.nav-list a.active,
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* ================= HERO ================= */
+
 .hero {
   background-color: var(--primary);
   color: var(--accent);
-  padding: 3rem 0;
   text-align: center;
+  padding: 4rem 1rem;
 }
 
 .hero h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--accent); /* 🔥 FIXED */
 }
 
-.hero .subheading {
+.hero p {
+  color: var(--accent); /* 🔥 FIXED */
+  max-width: 700px;
+  margin: 0 auto 1.75rem auto;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
+
+/* Buttons */
 
 .button-group {
   display: flex;
@@ -108,10 +112,11 @@ body {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
   border: 2px solid var(--accent);
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -125,23 +130,24 @@ body {
   color: var(--accent);
 }
 
-.btn-primary:hover,
-.btn-secondary:hover {
+.btn:hover {
   opacity: 0.9;
 }
 
-/* Warning Section */
+/* ================= WARNING BOX ================= */
+
 .warning-box {
   border: 1px solid var(--warning);
   background-color: #fff7ed;
   color: var(--warning);
   padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 0.25rem;
+  margin: 2rem auto;
+  border-radius: 4px;
 }
 
-/* Cards Section */
-.what-happened .cards-grid {
+/* ================= WHAT HAPPENED CARDS ================= */
+
+.cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
@@ -153,14 +159,13 @@ body {
   padding: 1rem;
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   text-decoration: none;
   color: var(--heading);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card h3 {
-  margin-bottom: 0;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -170,13 +175,14 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Decision Tree */
+/* ================= DECISION TREE ================= */
+
 .decision-tree {
   margin-top: 2rem;
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   padding: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 }
 
 .decision-tree label {
@@ -195,12 +201,13 @@ body {
 .decision-result {
   padding: 0.75rem;
   background-color: #f9f9f9;
-  border-radius: 0.25rem;
   border: 1px solid #e5e7eb;
+  border-radius: 4px;
   min-height: 2rem;
 }
 
-/* ✅ Fix: keep ordered list numbers inside the decision-result box */
+/* Keep list numbers inside the box */
+
 .decision-result ol {
   list-style-position: inside;
   margin: 0;
@@ -208,43 +215,53 @@ body {
 }
 
 .decision-result li {
-  margin: 0.35rem 0;
+  margin: 0.4rem 0;
 }
 
-/* Lists */
-.steps-list {
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
+/* ================= CONTENT HEADINGS ================= */
+
+main h1,
+main h2,
+main h3 {
+  color: var(--heading);
 }
 
-.steps-list li + li {
-  margin-top: 0.75rem;
+main h1 {
+  margin: 1.5rem 0 1rem;
+  font-size: 1.5rem;
 }
 
-.protection-list,
-.red-flags {
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
+main h2 {
+  margin: 1.25rem 0 0.75rem;
+  font-size: 1.25rem;
 }
 
-.protection-list li + li,
-.red-flags li + li {
-  margin-top: 0.5rem;
+main h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
-/* Footer */
+main p,
+main ul,
+main ol {
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+/* ================= FOOTER ================= */
+
 .site-footer {
   background-color: var(--primary);
   color: var(--accent);
   padding: 1rem 0;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
 }
 
 .footer-links a {
@@ -257,36 +274,8 @@ body {
   text-decoration: underline;
 }
 
-/* Sections */
-main h1, main h2, main h3 {
-  color: var(--heading);
-}
+/* ================= ACCESSIBILITY ================= */
 
-main h1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-main h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-}
-
-main h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-}
-
-main p,
-main ul,
-main ol {
-  margin-bottom: 1rem;
-  max-width: 800px;
-}
-
-/* Accessibility */
 a:focus,
 button:focus,
 select:focus {
@@ -294,15 +283,18 @@ select:focus {
   outline-offset: 2px;
 }
 
-/* Responsive adjustments */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 600px) {
   .button-group {
     flex-direction: column;
   }
+
   .nav-list {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
+
   .cards-grid {
     grid-template-columns: 1fr;
   }
